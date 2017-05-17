@@ -8,29 +8,44 @@
 public class Conversion
 {
     public static int[] toBinaryArray(int n){
-        int lenght = calculateLenght(n);
+        int lenght = calculateBinaryArraySize(n);
         int [] binaryArray = new int [lenght];
-        for (int i = lenght-1; n > 0; i--)
+        for(int index = lenght -1; index >=0; index--)
         {
-            binaryArray[i] = n % 2;
-            n = n/10;
+            binaryArray[index] = n % 2;
+            n = n/2;
         }
         return binaryArray;
     }
-    public static int calculateLenght (int n)
+    public static int calculateBinaryArraySize (int n)
     {
-        boolean flag = false;
-        int counter = 1;
-        while (flag == false)
+        int lenght = 1;
+        while (n > 1)
         {
-            if ((n >= Math.pow(2, (counter-1)))&& (n < Math.pow(2, counter)))
-            {
-               flag = true;
-            }
-            else{
-                counter++;
-            }            
+            lenght++;
+            n = n/2;
         }
-        return counter;
+        return lenght;
+    }
+    public static void swapExtremeBits (int [] array)
+    {
+        int j = array.length-1;
+        int aux = 0;
+        for (int i = 0; i < (array.length/2); i++)
+        {
+            aux = array[i];
+            array[i] = array[j];
+            array[j] = aux;
+            j--;
+        }
+    }
+    public static int toDecimal (int [] binaryArray)
+    {
+        int result = 0;        
+        for(int exp = 0,i = binaryArray.length -1; i>=0; i--,exp++)
+        {
+            result = result + (binaryArray[i]*(int)(Math.pow(2,exp)));            
+        }
+        return result;
     }
 } 
