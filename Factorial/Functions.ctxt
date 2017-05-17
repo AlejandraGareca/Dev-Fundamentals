@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Functions
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Factorial\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=n
+comment1.target=int\ calcularFactorial(int)
+comment2.params=n
+comment2.target=boolean\ capicua(int)
+comment3.params=n
+comment3.target=int\ invertDigit(int)
+numComments=4

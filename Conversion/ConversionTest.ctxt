@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ConversionTest
+comment0.text=\r\n\ The\ test\ class\ ConversionTest.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ lenghtOf0is1()
+comment1.text=@Test\r\n\ \ \ \ public\ void\ binaryOfZeroIsZero()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ int\ []\ binaryArray\ \=\ Conversion.toBinaryArray(0);\r\n\ \ \ \ \ \ \ \ assertArrayEquals(new\ int\ []\ {0},\ binaryArray);\r\n\ \ \ \ }\r\n\ \ \ \ @Test\r\n\ \ \ \ public\ void\ binaryOfTwoIs1_0()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ int\ []\ binaryArray\ \=\ Conversion.toBinaryArray(2);\r\n\ \ \ \ \ \ \ \ assertArrayEquals(new\ int\ []\ {0,\ 1},\ binaryArray);\r\n\ \ \ \ }\r\n\ \ \ \ @Test\r\n\ \ \ \ public\ void\ binaryOf129Is1_0_0_0_0_0_0_1()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ int\ []\ expected\ \=\ {1,0,0,0,0,0,0,1};\r\n\ \ \ \ \ \ \ \ assertArrayEquals(expected,\ Conversion.toBinaryArray(129));\r\n}
+numComments=2
