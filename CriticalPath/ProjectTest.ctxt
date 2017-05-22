@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ProjectTest
+comment0.text=\r\n\ The\ test\ class\ ProjectTest.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ createAnEmptyProject()
+comment1.text=\r\n\ US\ 0\r\n
+comment2.params=
+comment2.target=void\ createAProjectWithName()
+comment2.text=\r\n\ US\ 0\r\n
+comment3.params=
+comment3.target=void\ calculateTimeToDeliverOfASingleTask()
+comment3.text=\r\n\ US\ 1\r\n
+comment4.params=
+comment4.target=void\ calculateTimeToDeliverOfTwoNonDependentTasks()
+comment4.text=\r\n\ US\ 1\r\n
+numComments=5

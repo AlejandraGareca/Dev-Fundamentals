@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Project
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Project\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Project()
+comment2.params=name
+comment2.target=Project(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=task
+comment4.target=void\ addTask(Task)
+comment5.params=
+comment5.target=int\ calculateTimeToDelivery()
+numComments=6

@@ -8,14 +8,41 @@
 public class Task
 {
     private String description;
+    private String name;
+    private String owner;
+    private int timeToComplete;
     public Task(){
         description = "";
+        name = "";
+        owner = "";
+        timeToComplete = 0;
+    }
+    public Task(String name, int time){
+        this.name = "name";
+        this.timeToComplete = time;
     }
     public void setDescription(String description){
-        this.description = description;
-        
+        this.description = description;        
     }
     public String getDescription(){
         return description;
+    }
+    public void setName(String name){
+        this.name = name;        
+    }
+    public String getName(){
+        return name;
+    }
+    public void setOwner(String owner){
+        this.owner = owner;        
+    }
+    public String getOwner(){
+        return owner;
+    }
+     public void setTimeToComplete(int time){
+        this.timeToComplete = time;        
+    }
+    public int getTimeToComplete(){
+        return timeToComplete;
     }
 }
