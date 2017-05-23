@@ -1,4 +1,4 @@
-
+import java.util.Vector;
 /**
  * Write a description of class Task here.
  *
@@ -11,16 +11,18 @@ public class Task
     private String name;
     private String owner;
     private int timeToComplete;
-    private Task preRequisite;
+    private Vector<Task> dependantTasks;
     public Task(){
         description = "";
         name = "";
         owner = "";
         timeToComplete = 0;
+        dependantTasks = new Vector<Task>(); 
     }
     public Task(String name, int time){
         this.name = name;
         this.timeToComplete = time;
+        dependantTasks = new Vector<Task>(); 
     }
     public void setDescription(String description){
         this.description = description;        
@@ -47,17 +49,27 @@ public class Task
         return timeToComplete;
     }
     public void dependsOn(Task otherTask){
-        preRequisite = otherTask;
+        dependantTasks.add(otherTask);
     }
-    public Task getPreRequisite(){
-        return preRequisite;
+    public  Vector<Task> getDependantTaks(){
+        return dependantTasks;
     }
     public int calculateTimeToComplete(){
         int time = getTimeToComplete();
-        if(getPreRequisite()!= null)
+        if(getDependantTaks()!= null)
         {
-            time += getPreRequisite().getTimeToComplete();
+            time += getHighestTimeOfDependantTasks();
         }
         return time;
+    }
+    public int getHighestTimeOfDependantTasks(){
+        int highestTime =  0;
+        for(Task task: dependantTasks){
+           int time = task.getTimeToComplete();
+            if(time>highestTime){
+                highestTime = time;
+            }
+        }
+        return highestTime;
     }
 }
