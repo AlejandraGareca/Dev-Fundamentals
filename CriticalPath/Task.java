@@ -11,6 +11,7 @@ public class Task
     private String name;
     private String owner;
     private int timeToComplete;
+    private Task preRequisite;
     public Task(){
         description = "";
         name = "";
@@ -18,7 +19,7 @@ public class Task
         timeToComplete = 0;
     }
     public Task(String name, int time){
-        this.name = "name";
+        this.name = name;
         this.timeToComplete = time;
     }
     public void setDescription(String description){
@@ -44,5 +45,19 @@ public class Task
     }
     public int getTimeToComplete(){
         return timeToComplete;
+    }
+    public void dependsOn(Task otherTask){
+        preRequisite = otherTask;
+    }
+    public Task getPreRequisite(){
+        return preRequisite;
+    }
+    public int calculateTimeToComplete(){
+        int time = getTimeToComplete();
+        if(getPreRequisite()!= null)
+        {
+            time += getPreRequisite().getTimeToComplete();
+        }
+        return time;
     }
 }
