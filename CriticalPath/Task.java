@@ -2,7 +2,7 @@ import java.util.Vector;
 /**
  * Write a description of class Task here.
  *
- * @author (your name)
+ * @author Alejandra Paola Gareca Cruz
  * @version (a version number or a date)
  */
 public class Task

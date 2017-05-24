@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * The test class ProjectTest.
  *
- * @author  (your name)
+ * @author  Alejandra Paola Gareca Cruz
  * @version (a version number or a date)
  */
 public class ProjectTest
