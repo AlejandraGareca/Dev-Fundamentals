@@ -62,10 +62,20 @@ public class Task
         }
         return time;
     }
+    public int calculateTimeToComplete2(){
+        int maxPreRequisiteTime = 0;
+        for(Task preReq: dependantTasks){
+            if(preReq.calculateTimeToComplete()>maxPreRequisiteTime)
+            {
+                maxPreRequisiteTime = preReq.calculateTimeToComplete2();
+            }
+        }
+        return getTimeToComplete()+maxPreRequisiteTime;
+    }
     public int getHighestTimeOfDependantTasks(){
         int highestTime =  0;
         for(Task task: dependantTasks){
-           int time = task.getTimeToComplete();
+           int time = task.calculateTimeToComplete();
             if(time>highestTime){
                 highestTime = time;
             }
